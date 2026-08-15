@@ -1,0 +1,13 @@
+>>> 10 & 11 ==> bitwise
+10
+>>> 10 and 11 ==> logical
+11
+>>> 0 and 11
+0
+
+&,|,^,~,<<,>> ==> bit wise
+
+and, or, not ==> logical
+
+Ternary Operator:
+x = first value if condition else second value

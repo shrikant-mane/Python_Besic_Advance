@@ -1,0 +1,8 @@
+Q What is decorator?
+
+A decorator is a callable that takes another function or class as input, adds or
+modifies its behavior, and returns a new callable, without modifying the original
+function's source code.
+
+Decorators are commonly used for logging, authentication, authorization, caching, timing,
+validation, retries, and transaction management.

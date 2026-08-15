@@ -1,0 +1,20 @@
+What is inheritance?
+
+“Inheritance in Python is an OOP mechanism that allows a derived class to reuse
+ and extend the attributes and behavior of a base class. It helps reduce code
+ duplication and establishes an is-a relationship between classes. Python supports
+ single, multiple, multilevel, hierarchical and hybrid inheritance. A derived class
+  can override a parent's method, and super() can be used to access the parent
+   implementation. Python resolves methods in inheritance hierarchies using MRO, or Method
+   Resolution Order.”
+
+ =========================
+
+What is MRO in Python?
+
+MRO stands for Method Resolution Order. It is the order in which Python searches classes when
+looking for a method or attribute, especially when inheritance is involved.
+
+Python uses the C3 Linearization algorithm to calculate MRO.
+We can see the MRO of a class using either ClassName.mro() or ClassName.__mro__
+

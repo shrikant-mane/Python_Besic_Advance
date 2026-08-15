@@ -1,0 +1,19 @@
+By default every attribute is public.
+name = "abc"
+
+Protected attributes can be accessed within the class anywhere but from outside of the
+ class only in child classes. We can specify an attribute as protected by prefexing with _
+ symbol
+_name = "abc"
+
+
+private attributes can be accessed only within the class.i.e from outside of the class we
+cannot access. We can declare a variable as private explicitly by prefexing with 2
+underscore symbols.
+__name = "abc"
+
+outside class by ==> objectreference._classname__attribute ==> emp._Employee__name
+
+
+
+

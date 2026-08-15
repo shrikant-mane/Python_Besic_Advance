@@ -1,0 +1,45 @@
+A concrete class is a class that can be instantiated directly and provides implementation
+ for its behavior.
+
+ Abstract Class
+An abstract class is a class that is intended to be used as a base class.
+It contains both abstract method + non-abstract methods.
+IS - A Relationship
+
+print(Animal.__abstractmethods__)
+print(Dog.__abstractmethods__)
+
+
+Interface
+An interface primarily defines a 'contract'.
+In general if an abstract class contains only abstract methods such type of abstract class is
+ considered as interface
+"CAN-DO" capability
+
+| Feature                       | Concrete Class | Abstract Class               | Interface             |
+| ----------------------------- | -------------- | ---------------------------- | --------------------- |
+| Can instantiate directly?     | ✅ Yes          | ❌ No                         | Conceptually no       |
+| Can contain implementation?   | ✅ Yes          | ✅ Yes                        | Usually contract only |
+| Can contain abstract methods? | ❌ Usually no   | ✅ Yes                        | ✅ Yes                 |
+| Can contain concrete methods? | ✅ Yes          | ✅ Yes                        | Depends on language   |
+| Main purpose                  | Actual object  | Base class + common behavior | Contract              |
+| Inheritance relationship      | Normal         | Strong                       | Capability/contract   |
+| Python mechanism              | `class`        | `ABC`                        | `Protocol` / `ABC`    |
+| Shared state                  | ✅              | ✅                            | Usually not the focus |
+| Constructor                   | ✅              | ✅                            | Usually not the focus |
+
+
+In Abstraction and Interface
+ Parent class abstract methods should be implemented in the child classes. Otherwise we
+ cannot instantiate child class.If we are not creating child class object then we won't get
+ any error
+
+A concrete class provides a complete implementation and can be instantiated directly.
+An abstract class is a partially implemented base class that can contain both concrete and
+abstract methods, and it cannot normally be instantiated. An interface primarily defines a
+ contract that implementing classes must satisfy. In Python, there is no dedicated interface
+ keyword; interfaces are commonly represented using ABC/abstractmethod or typing.Protocol.
+ Abstract classes are useful when subclasses share state or implementation, while interfaces
+ are useful when unrelated classes need to follow the same behavioral contract.
+
+

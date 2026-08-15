@@ -1,0 +1,151 @@
+20
+ ↓
+hash(20)
+ ↓
+hash-table location
+ ↓
+check candidate element
+ ↓
+equality comparison
+
+====================
+A set uses this hash to locate where the object should be stored.
+
+             100
+              │
+              ▼
+          hash(100)
+              │
+              ▼
+       hash table slot
+
+             New Object
+                 │
+                 ▼
+             hash(x)
+                 │
+                 ▼
+        Locate candidate slot
+                 │
+                 ▼
+        Hash matches candidate?
+             /         \
+           No          Yes
+           │             │
+           ▼             ▼
+        Insert       Compare ==
+                         │
+                    ┌────┴────┐
+                   Yes        No
+                    │          │
+                    ▼          ▼
+                 Duplicate   Collision
+                 → Ignore    → Continue
+
+
+>>> a = (1,)
+>>> hash(a)
+-6644214454873602895
+>>> b = a
+>>> a == b
+True
+>>> hash(a)
+-6644214454873602895
+>>> hash(b)
+-6644214454873602895
+
+is ===> Are these references pointing to the exact same object?
+==  ==> Are these objects equal in value/meaning according to their equality implementation?
+
+Sets fundamentally care about hashability and equality, not simply: a is b
+
+Why Lists Cannot Be Set Elements?
+--> If the object's hash depended on its contents, its hash would potentially change
+
+Why Tuple Can Be a Set Element
+
+data = {(1, 2), (3, 4)} ==> allowed
+data = {([1, 2], 3)} ==> error
+
+
+==========================
+>>> data = {[1,2], [3,4]}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>> data = {(1,2), (3,4)}
+>>> data = {(1,2,[4,5]), (3,4)}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+
+===========================
+
+Why Sets Are Fast
+
+numbers = [10, 20, 30, 40, 50]
+find(30) ==> O(n)
+
+numbers = {10, 20, 30, 40, 50}  ==> O(1)
+30
+ ↓
+hash(30)
+ ↓
+calculate candidate slot
+ ↓
+check candidate
+
+A set isn't designed around positional order.
+add()
+remove()
+discard()
+
+===========================================
+What About Different Objects With the Same Hash?
+
+Same hash
+      ≠
+Same object
+      ≠
+Equal object
+
+===========================
+A Python set is implemented using a hash-table-based data structure and maintains
+a uniqueness invariant. When an element is inserted, Python uses its hash to
+locate the relevant table position and then uses equality comparison to determine
+whether an equivalent element already exists. If an equal, hash-compatible element
+ is already present, the insertion doesn't create another entry. This gives sets
+ average O(1) membership and insertion while guaranteeing uniqueness according to
+ the object's equality/hash semantics.
+ ===========================
+
+                SET
+                 │
+                 ▼
+            Hash Table
+                 │
+                 ▼
+             hash(x)
+                 │
+                 ▼
+        Find candidate slot
+                 │
+                 ▼
+         Hash compatible?
+           /          \
+         No           Yes
+         │              │
+         ▼              ▼
+      Different      Compare ==
+                         │
+                    ┌────┴────┐
+                   True      False
+                    │          │
+                    ▼          ▼
+               Duplicate    Collision
+                 exists       only
+                    │          │
+                    ▼          ▼
+               Don't add    Continue
+
+

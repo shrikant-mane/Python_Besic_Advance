@@ -1,0 +1,221 @@
+same id
+
+numbers = [1, 2, 3]
+print(id(numbers))
+numbers.append(4)
+print(id(numbers))
+
+
+different id
+
+numbers = [1, 2, 3]
+print(id(numbers))
+numbers = [1, 2, 3, 4]
+print(id(numbers))
+
+-----
+name = "Python"
+name[0] = "J"
+
+name = "Python"
+name = "Jython"
+
+numbers = [1, 2, 3]
+numbers[0] = 100
+print(numbers)
+
+
+>>> x = ([1,2], [2,3])
+>>> x
+([1, 2], [2, 3])
+>>> id(x)
+4353817600
+>>> id(x[1])
+4353282304
+>>> x[1] = [4,5]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> x[1].append([4,5])
+>>> x
+([1, 2], [2, 3, [4, 5]])
+>>>
+
+==========================
+
+a = [1,2,3]
+b = a
+        ┌──────────────┐
+a ─────►│              │
+        │ [1, 2, 3]    │
+b ─────►│              │
+        └──────────────┘
+>>> a == b
+True
+>>> a is b
+True
+
+===========================
+
+>>> a = [1,2,3]
+>>> b = [1,2,3]
+>>> a == b
+True
+>>> a is b
+False
+
+============================
+## Function Arguments and Mutability
+
+>>> def change(items):
+...     items = [11,22,33,44]
+...
+>>> numbers = [1,2,3,4]
+>>> change(numbers)
+>>> print(numbers)
+[1, 2, 3, 4]
+>>>
+doesn't modify the original list.
+It makes the local variable items point to another list.
+
+=========================
+Why Are Immutable Objects Useful?
+
+Immutability gives several benefits.
+
+1. Predictability
+An immutable object cannot unexpectedly change.
+
+2. Safer sharing
+Multiple parts of a program can safely reference the same immutable object.
+
+3. Hashability
+Many immutable objects can be used as:
+
+4. Easier reasoning
+You don't have to worry about another function modifying the object.
+
+5. Useful for concurrency
+Immutable data is easier to share between concurrent operations
+because there is no state mutation to coordinate.
+
+============================
+Why Is list Not Allowed as a Dictionary Key?
+list is mutable --> Break Hash concept
+
+Why Tuple Can Be a Dictionary Key
+Tuple is immutable.
+
+======================
+## Hashability and Immutability
+
+>>> x = (1,2,3)
+>>> hash(x)
+529344067295497451
+>>> x = ([1,4],2,3)
+>>> hash(x)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>>
+
+An object is hashable if its hash value remains stable during its lifetime
+and it supports equality comparison appropriately.
+
+=======================
+
+>>> a = 'shri'
+>>> b = 'shri'
+>>> a == b
+True
+>>> a is b
+True
+=======================
+
+## Shallow Copy  |  Deep Copy
+
+>>> orignal = [[1,2],[3,4]]
+>>> copy_new = orignal.copy()
+>>> copy_new
+[[1, 2], [3, 4]]
+>>> id(orignal)
+4562287296
+>>> id(copy_new)
+4562519040
+
+>>> import copy
+>>> deep_copy = copy.deepcopy(orignal)
+>>> deep_copy
+[[1, 2], 100]
+
+
+| Operation          | Outer object | Nested objects  |
+| ------------------ | ------------ | --------------- |
+| Assignment `b = a` | Same         | Same            |
+| Shallow copy       | New          | Same references |
+| Deep copy          | New          | New recursively |
+
+==========================
+
+Mutable vs Immutable — Memory Perspective
+
+a = [1, 2, 3]
+b = a
+
+Stack / namespace
+------------------
+a ─────┐
+       │
+b ─────┘
+        │
+        ▼
+Heap
+------------------
+[1, 2, 3]
+
+a ─────► [1, 2, 3]
+
+b ─────► [1, 2, 3]
+
+========================
+
+>>> a = (1,2)
+>>> id(a)
+4562434880
+>>> a +=(3,)
+>>> a
+(1, 2, 3)
+>>> id(a)
+4562519104
+
+=====================
+
+Python uses call by object sharing (often described as call by object reference).
+A function receives a reference to the same object, but the local parameter is
+itself a separate name. Mutating the object is visible to the caller,
+while rebinding the parameter is not.
+
+======================
+
+ou should be able to explain:
+
+Object vs variable
+References
+Object identity
+id()
+is vs ==
+Mutation vs assignment
+Aliasing
+Function argument behavior
+Call by object sharing
+Mutable default arguments
+Shallow vs deep copy
+Nested mutability
+Hashability
+Dictionary keys and sets
+Tuple containing mutable objects
+Class-level mutable attributes
+Dataclass default_factory
+__add__ vs __iadd__
+Immutability and concurrency
+Designing immutable custom objects.

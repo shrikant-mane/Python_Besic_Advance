@@ -1,0 +1,20 @@
+What is Encapsulation in Python?
+
+Encapsulation is the OOP principle of bundling data and the methods that operate on that data
+inside a class, while controlling how that internal state is accessed or modified
+
+public method
+protected method
+private method
+
+mangling
+
+accessing private method
+
+
+Encapsulation asks:
+How do I control access to the object's internal state?
+
+method()       → Public    → "Use me"
+_method()      → Protected → "Internal; subclasses may use me"
+__method()     → Private   → "Internal to this class"
