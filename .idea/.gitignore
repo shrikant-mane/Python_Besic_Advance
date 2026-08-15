@@ -3,3 +3,14 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+.DS_Store
+*.log
+*.xml
+
+
