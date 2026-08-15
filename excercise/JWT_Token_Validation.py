@@ -43,7 +43,7 @@ import jwt
 
 
 
-SECRET_KEY = 'my-secret-key'
+SECRET_KEY = 'my-secret-key-qwsdrfgcvf'
 ALGORITHM = 'HS256'
 
 def create_token():
