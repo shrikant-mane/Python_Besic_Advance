@@ -1,0 +1,25 @@
+Linked List
+    ↓
+Singly Linked List
+    ↓
+Insert operations
+    ↓
+Delete operations
+    ↓
+Search
+    ↓
+Reverse Linked List
+    ↓
+Find Middle Node
+    ↓
+Find Nth Node from End
+    ↓
+Detect Cycle
+    ↓
+Remove Cycle
+    ↓
+Merge Two Sorted Linked Lists
+    ↓
+Doubly Linked List
+    ↓
+Circular Linked List
