@@ -1,0 +1,27 @@
+A Queue is a linear data structure that follows the FIFO principle:
+
+    FIFO = First In, First Out
+
+          QUEUE
+
+Front                Rear
+  ↓                   ↓
+┌────┬────┬────┬────┬────┐
+│ 10 │ 20 │ 30 │ 40 │ 50 │
+└────┴────┴────┴────┴────┘
+  ↑                       ↑
+Remove                  Insert
+
+
+| Operation  | Meaning                      |
+| ---------- | ---------------------------- |
+| enqueue    | Add element                  |
+| dequeue    | Remove element               |
+| peek/front | See front element            |
+| is_empty   | Check whether queue is empty |
+| size       | Number of elements           |
+
+Enqueue → Insert
+Dequeue → Delete
+
+

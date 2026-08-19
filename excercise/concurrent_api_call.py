@@ -1,5 +1,9 @@
 import asyncio
 
+"""
+difference between time.sleep() and asyncio.sleep()
+"""
+
 async def get_user():
     await asyncio.sleep(2)
     # return {"user":'Shrikant'}

@@ -1,0 +1,76 @@
+BaseException
+│
+├── BaseExceptionGroup
+│
+├── GeneratorExit
+│
+├── KeyboardInterrupt
+│
+├── SystemExit
+│
+└── Exception
+    │
+    ├── ArithmeticError
+    │   ├── FloatingPointError
+    │   ├── OverflowError
+    │   └── ZeroDivisionError
+    │
+    ├── AssertionError
+    │
+    ├── AttributeError
+    │
+    ├── BufferError
+    │
+    ├── EOFError
+    │
+    ├── ImportError
+    │   └── ModuleNotFoundError
+    │
+    ├── LookupError
+    │   ├── IndexError
+    │   └── KeyError
+    │
+    ├── MemoryError
+    │
+    ├── NameError
+    │   └── UnboundLocalError
+    │
+    ├── OSError
+    │   ├── FileNotFoundError
+    │   ├── PermissionError
+    │   ├── IsADirectoryError
+    │   ├── NotADirectoryError
+    │   ├── TimeoutError
+    │   ├── ConnectionError
+    │   │   ├── BrokenPipeError
+    │   │   ├── ConnectionAbortedError
+    │   │   ├── ConnectionRefusedError
+    │   │   └── ConnectionResetError
+    │   └── ...
+    │
+    ├── RuntimeError
+    │   ├── NotImplementedError
+    │   └── RecursionError
+    │
+    ├── StopIteration
+    │
+    ├── StopAsyncIteration
+    │
+    ├── SyntaxError
+    │   └── IndentationError
+    │       └── TabError
+    │
+    ├── TypeError
+    │
+    ├── ValueError
+    │   └── UnicodeError
+    │       ├── UnicodeDecodeError
+    │       ├── UnicodeEncodeError
+    │       └── UnicodeTranslateError
+    │
+    └── Warning
+        ├── UserWarning
+        ├── DeprecationWarning
+        ├── RuntimeWarning
+        ├── SyntaxWarning
+        └── ...

@@ -1,0 +1,35 @@
+LIFO — Last In, First Out
+
+        ┌───────┐
+        │  30   │ ← Top
+        ├───────┤
+        │  20   │
+        ├───────┤
+        │  10   │
+        └───────┘
+
+If you add 40:
+
+        ┌───────┐
+        │  40   │ ← Top
+        ├───────┤
+        │  30   │
+        ├───────┤
+        │  20   │
+        ├───────┤
+        │  10   │
+        └───────┘
+
+If you perform pop(), 40 is removed first
+
+| Operation  |     Meaning        | Typical Complexity |
+| ---------- | ------------------ | -----------------: |
+| push()     | Add element        |               O(1) |
+| pop()      | Remove top element |               O(1) |
+| peek()     | View top element   |               O(1) |
+| is_empty() | Check empty        |               O(1) |
+| size()     | Number of elements |               O(1) |
+
+
+
+
