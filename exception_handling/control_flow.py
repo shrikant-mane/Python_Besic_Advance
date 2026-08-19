@@ -1,3 +1,3 @@
-try:
-    print(10/2)
-    print()
+# try:
+#     print(10/2)
+#     print()
