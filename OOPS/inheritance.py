@@ -1,6 +1,3 @@
-from named_tuple import employee
-
-
 class Animal:
     """
     base class for animals in inheritance

@@ -1,43 +1,43 @@
 import time
 import jwt
 #
-# def validate_token(payload):
-#     if not isinstance(payload, dict):
-#         return False
-#
-#     if 'user_id' not in payload:
-#         return False
-#
-#     if 'role' not in payload:
-#         return False
-#
-#     if 'exp' not in payload:
-#         return False
-#
-#     # validate values
-#     if payload['user_id'] is None or payload['role'] is None:
-#         return False
-#
-#     if time.time() > payload['exp']:
-#         return False
-#
-#     return True
-#
-#
-# def authorize(payload, required_role):
-#     if payload['role'] != required_role:
-#         return False
-#     return True
-#
-# exp_time = time.time() + 5
-# token_payload = {
-#     "user_id": 101,
-#     "role": "admin",
-#     "exp": exp_time
-# }
-#
-# time.sleep(5)
-#
+def validate_token(payload):
+    if not isinstance(payload, dict):
+        return False
+
+    if 'user_id' not in payload:
+        return False
+
+    if 'role' not in payload:
+        return False
+
+    if 'exp' not in payload:
+        return False
+
+    # validate values
+    if payload['user_id'] is None or payload['role'] is None:
+        return False
+
+    if time.time() > payload['exp']:
+        return False
+
+    return True
+
+
+def authorize(payload, required_role):
+    if payload['role'] != required_role:
+        return False
+    return True
+
+exp_time = time.time() + 5
+token_payload = {
+    "user_id": 101,
+    "role": "admin",
+    "exp": exp_time
+}
+
+time.sleep(5)
+
 # print(validate_token(token_payload))
 # print(authorize(token_payload, required_role="admin"))
 

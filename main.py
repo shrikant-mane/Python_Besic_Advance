@@ -125,10 +125,10 @@ def break_statement():
 
 break_statement()
 
-# def strip_string(string):
-#     new_string = string.strip()
-#     return new_string
-#
+def strip_string(string):
+    new_string = string.strip()
+    return new_string
+
 # old_string = str(input("enter the string"))
 #
 # new_string = strip_string(old_string)

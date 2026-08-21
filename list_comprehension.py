@@ -22,3 +22,14 @@ def list_comprehension():
     print(dictionary)
 
 list_comprehension()
+
+# new_list = [int(input()) for i in range(5)]
+# print(new_list)
+
+# input_list = list(input().split(" "))
+# print(input_list)
+
+
+# new_list = list(map(int, input().split(" ")))
+# print(new_list)
+

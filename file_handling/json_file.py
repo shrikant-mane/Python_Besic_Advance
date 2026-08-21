@@ -1,6 +1,6 @@
 import json
-# json_data = '{"name": "Elizabete Maike", "age": 30, "city": "New York"}'
-# data  = json.loads(json_data)
+json_data = '{"name": "Elizabete Maike", "age": 30, "city": "New York"}'
+data  = json.loads(json_data)
 # print(data)
 # print(type(data))
 # print(f"name: {data['name']}")

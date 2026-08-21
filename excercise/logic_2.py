@@ -10,10 +10,9 @@ def group_anagrams(str_list):
         anagram[key].append(word)
 
     return list(anagram.values())
-#
+
 # words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 # print(group_anagrams(words))
-from main import result
 
 
 def find_missing_number(num_list):
@@ -118,7 +117,7 @@ def value_in_set(set_data, num):
 
 def is_comman_element(set_1, set_2):
     new_set = set()
-    # new_set = set_1.intersection(set_2)
+    new_set = set_1.intersection(set_2)
     list1 = list(set_1)
     list2 = list(set_2)
     for i in list1:

@@ -19,6 +19,3 @@ greet()
 ## Calculate Execution Time
 ##===============
 
-
-def my_func():
-    print(named)

@@ -1,7 +1,6 @@
 {
-    "address": "pune",
-    "employee_id": 1,
-    "first_name": "shrikant",
-    "last_name": "mane",
+    "address": "Pune",
+    "emp_id": 30,
+    "name": "Shrikant",
     "salary": 70000
 }

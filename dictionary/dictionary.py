@@ -1,15 +1,15 @@
 from collections import Counter
 
-# def dict_operations(dictionary):
-#     print(dictionary.items())
-#     print(type(dictionary.items()[1]))
-#     print(dictionary.keys())
-#     print(dictionary.values())
-#     print(dictionary.get('name'))
-#     dictionary.update({'name':'Vinay'})
-#     print(dictionary)
-#
-# dict_obj = {'name': 'shrikant', 'village':'Rajache Kurle', 'dist':'Satara'}
+def dict_operations(dictionary):
+    print(dictionary.items())
+    print(type(dictionary.items()[1]))
+    print(dictionary.keys())
+    print(dictionary.values())
+    print(dictionary.get('name'))
+    dictionary.update({'name':'Vinay'})
+    print(dictionary)
+
+dict_obj = {'name': 'shrikant', 'village':'Rajache Kurle', 'dist':'Satara'}
 # dict_operations(dict_obj)
 
 
@@ -39,4 +39,4 @@ dict_counter(name_dict)
 
 nums = [2,7,9,11]
 target = 9
-print(twoSum(nums, target))
+# print(twoSum(nums, target))

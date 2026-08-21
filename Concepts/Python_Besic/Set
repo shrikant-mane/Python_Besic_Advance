@@ -114,9 +114,9 @@ A Python set is implemented using a hash-table-based data structure and maintain
 a uniqueness invariant. When an element is inserted, Python uses its hash to
 locate the relevant table position and then uses equality comparison to determine
 whether an equivalent element already exists. If an equal, hash-compatible element
- is already present, the insertion doesn't create another entry. This gives sets
- average O(1) membership and insertion while guaranteeing uniqueness according to
- the object's equality/hash semantics.
+is already present, the insertion doesn't create another entry. This gives sets
+average O(1) membership and insertion while guaranteeing uniqueness according to
+the object's equality/hash semantics.
  ===========================
 
                 SET

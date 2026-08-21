@@ -1,12 +1,15 @@
 What is inheritance?
 
 “Inheritance in Python is an OOP mechanism that allows a derived class to reuse
- and extend the attributes and behavior of a base class. It helps reduce code
- duplication and establishes an is-a relationship between classes. Python supports
- single, multiple, multilevel, hierarchical and hybrid inheritance. A derived class
-  can override a parent's method, and super() can be used to access the parent
-   implementation. Python resolves methods in inheritance hierarchies using MRO, or Method
-   Resolution Order.”
+and extend the attributes and behavior of a base class. It helps reduce code
+duplication and establishes an is-a relationship between classes. Python supports
+single, multiple, multilevel, hierarchical and hybrid inheritance. A derived class
+can override a parent's method, and super() can be used to access the parent
+implementation. Python resolves methods in inheritance hierarchies using MRO, or Method
+Resolution Order.”
+
+==> Hierarchical Inheritance
+==> Multiple Inheritance
 
  =========================
 

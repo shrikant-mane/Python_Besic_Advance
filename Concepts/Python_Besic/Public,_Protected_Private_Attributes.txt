@@ -2,7 +2,7 @@ By default every attribute is public.
 name = "abc"
 
 Protected attributes can be accessed within the class anywhere but from outside of the
- class only in child classes. We can specify an attribute as protected by prefexing with _
+class only in child classes. We can specify an attribute as protected by prefexing with _
  symbol
 _name = "abc"
 

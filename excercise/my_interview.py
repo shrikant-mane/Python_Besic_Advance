@@ -1,4 +1,5 @@
 import time
+
 def find_duplicate_api(api_list):
     api_dict = dict()
     final_api_list = list()
@@ -25,8 +26,8 @@ requests = [
     ("user1", "/api/books", "GET"),
 ]
 
-result = find_duplicate_api(requests)
-print(result)
+# result = find_duplicate_api(requests)
+# print(result)
 
 
 
@@ -55,10 +56,42 @@ class TTLCache:
     def delete(self, key):
         del self.cache[key, None]
 
-cache = TTLCache()
+# cache = TTLCache()
+#
+# # cache.set("username", "Shrikant", 10)
+# # time.sleep(11)
+# # print(cache.get("username"))
 
-cache.set("username", "Shrikant", 10)
-time.sleep(11)
-print(cache.get("username"))
+
+### LRU Cache
+class LRUCache:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.cache = {}
+
+    def get(self, key):
+        if key not in self.cache:
+            return -1
+
+        value = self.cache.pop(key)
+        self.cache[key] = value
+        print(self.cache)
+        return value
+
+    def put(self, key, value):
+        if key in self.cache:
+            self.cache.pop()
+
+        elif len(self.cache) >= self.capacity:
+            self.cache.pop(next(iter(self.cache)))
+
+        self.cache[key] = value
 
 
+cache = LRUCache(3)
+cache.put('name', 'shrikant')
+cache.put('college', 'VIIT')
+cache.put('stream', "Electronics and Telecommunications")
+
+print(cache.get('stream'))
+print(cache.get('name'))

@@ -1,7 +1,5 @@
 from collections import namedtuple
 
-from list import students
-
 Person = namedtuple('person', ['name', 'age', 'city'])
 
 new_person = Person(name='shrikant', age=27, city='satara')

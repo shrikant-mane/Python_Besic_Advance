@@ -50,9 +50,9 @@ a ─────►│              │
         │ [1, 2, 3]    │
 b ─────►│              │
         └──────────────┘
->>> a == b
+>>> a == b   ==> compare values
 True
->>> a is b
+>>> a is b   ==> compare object identity
 True
 
 ===========================
@@ -197,7 +197,7 @@ while rebinding the parameter is not.
 
 ======================
 
-ou should be able to explain:
+you should be able to explain:
 
 Object vs variable
 References

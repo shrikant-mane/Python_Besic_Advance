@@ -1,23 +1,23 @@
 import csv
 
-# def read_csv(filename):
-#     with open(filename) as csvfile:
-#         reader = csv.reader(csvfile)
-#         for row in reader:
-#             print(row)
+def read_csv(filename):
+    with open(filename) as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            print(row)
 # read_csv(input("Enter a filename: "))
 
 
-# def write_csv(filename, data):
-#     with open(filename, 'a+', newline='\n') as csvfile:
-#         csvwriter = csv.writer(csvfile)
-#         csvwriter.writerow(data)
-#
-#         csvfile.seek(0)
-#         reader = csv.reader(csvfile)
-#         for row in reader:
-#             print(row)
-#
+def write_csv(filename, data):
+    with open(filename, 'a+', newline='\n') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(data)
+
+        csvfile.seek(0)
+        reader = csv.reader(csvfile)
+        for row in reader:
+            print(row)
+
 # data =['vinay', 26, 'Satara', 40000, 'Teacher']
 # write_csv('data.csv', data)
 

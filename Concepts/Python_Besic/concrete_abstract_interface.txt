@@ -18,15 +18,15 @@ In general if an abstract class contains only abstract methods such type of abst
 
 | Feature                       | Concrete Class | Abstract Class               | Interface             |
 | ----------------------------- | -------------- | ---------------------------- | --------------------- |
-| Can instantiate directly?     | ✅ Yes          | ❌ No                         | Conceptually no       |
-| Can contain implementation?   | ✅ Yes          | ✅ Yes                        | Usually contract only |
-| Can contain abstract methods? | ❌ Usually no   | ✅ Yes                        | ✅ Yes                 |
-| Can contain concrete methods? | ✅ Yes          | ✅ Yes                        | Depends on language   |
-| Main purpose                  | Actual object  | Base class + common behavior | Contract              |
-| Inheritance relationship      | Normal         | Strong                       | Capability/contract   |
-| Python mechanism              | `class`        | `ABC`                        | `Protocol` / `ABC`    |
-| Shared state                  | ✅              | ✅                            | Usually not the focus |
-| Constructor                   | ✅              | ✅                            | Usually not the focus |
+| Can instantiate directly?     | ✅ Yes         | ❌ No                        | Conceptually no       |
+| Can contain implementation?   | ✅ Yes         | ✅ Yes                       | Usually contract only |
+| Can contain abstract methods? | ❌ Usually no  | ✅ Yes                       | ✅ Yes                |
+| Can contain concrete methods? | ✅ Yes         | ✅ Yes                       | Depends on language   |
+| Main purpose                  | Actual object  | Base class + common behavior | Contract               |
+| Inheritance relationship      | Normal         | Strong                       | Capability/contract    |
+| Python mechanism              | `class`        | `ABC`                        | Protocol` / `ABC`      |
+| Shared state                  | ✅             | ✅                           |  Usually not the focus |
+| Constructor                   | ✅             | ✅                           | Usually not the focus  |
 
 
 In Abstraction and Interface
