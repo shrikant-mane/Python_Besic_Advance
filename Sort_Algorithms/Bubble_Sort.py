@@ -14,8 +14,8 @@ num_list = [int(x) for x in input("enter the numbers: ").split(",")]
 print(bubble_sort(num_list))
 
 
-## Optimized bubble sort
-# f no swap happens during a complete pass,
+# Optimized bubble sort
+# If no swap happens during a complete pass,
 # the array is already sorted and we can stop early.
 def optimized_bubble_sort2(arr):
     swapped = False

@@ -95,3 +95,6 @@ cache.put('stream', "Electronics and Telecommunications")
 
 print(cache.get('stream'))
 print(cache.get('name'))
+
+cache.put('Year', '2021')
+print(cache.get('college'))

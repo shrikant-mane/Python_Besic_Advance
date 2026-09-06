@@ -1,0 +1,64 @@
+1. Find duplicate elements efficiently
+
+Input:
+[1, 2, 3, 4, 2, 5, 3, 6]
+
+Output:
+[2, 3]
+
+========================
+
+2. Find the first non-repeating character
+Input:  "swiss"
+Output: "w"
+
+=======================
+
+3. Implement an LRU Cache
+Implement an LRU cache with:
+
+get(key)
+put(key, value)
+
+Both operations should ideally be O(1).
+=======================
+
+4. Write a function to group records
+
+Given:
+
+users = [
+    {"name": "A", "department": "IT"},
+    {"name": "B", "department": "HR"},
+    {"name": "C", "department": "IT"},
+]
+
+Return:
+
+{
+    "IT": ["A", "C"],
+    "HR": ["B"]
+}
+
+Implement using defaultdict.
+
+=============================
+
+5. Decorator for execution time
+
+Create a Python decorator that measures how long a function takes to execute.
+Example:
+
+@time_execution
+def process_data():
+    ...
+
+Output:
+process_data took 0.52 seconds
+
+=====================================
+
+6. Fibonacci Series
+
+=====================================
+

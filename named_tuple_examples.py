@@ -36,4 +36,4 @@ students = [
 ]
 
 for student in students:
-    print(f"")
+    print(f"{Students.__dict__}")

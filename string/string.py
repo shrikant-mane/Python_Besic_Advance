@@ -4,6 +4,22 @@
 #
 # main_str = "abcdabcdabcababcd"
 # sub_str = 'abc'
+
+def find_sub_string(string, substr):
+    count = 0
+    sub_len = len(substr)
+    for i in range(len(string)):
+        if string[i] == substr[0]:
+            print(string[i:sub_len])
+            if string[i:i+sub_len] == substr:
+                count += 1
+    return count
+
+# main_str = "abcdabcdabcababcd"
+# sub_str = 'abc'
+# result = find_sub_string(main_str, sub_str)
+# print(result)
+
 #
 # main_length = 0
 # for ch in main_str:

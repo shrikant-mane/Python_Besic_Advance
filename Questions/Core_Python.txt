@@ -1,0 +1,38 @@
+1. What is the difference between an iterator and a generator in Python?
+    >>> numbers = (num for num in range(5))
+    >>> print(type(numbers))
+    <class 'generator'>
+
+    Why the generator taken as memory efficient?
+        lazy evaluation
+
+    Can you iterate over a generator twice?
+
+        No, not normally. A generator is single-use. Once it is exhausted, you cannot iterate over
+        it again.
+
+2. What is the difference between shallow copy and deep copy?
+    Explain with nested lists/dictionaries.
+    When would you use copy.copy() vs copy.deepcopy()?
+
+
+3. What are decorators in Python? Explain how you would create a custom decorator.
+    Why do we use functools.wraps()?
+    Where have you used decorators in Django?
+
+
+4. Explain *args and **kwargs.
+    Can both be used together?
+    What happens when a function receives unexpected keyword arguments?
+
+
+5. What is the difference between mutable and immutable objects?
+
+
+6. What is the difference between multiprocessing, multithreading and asyncio?
+
+
+
+
+
+

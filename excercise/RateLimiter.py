@@ -30,8 +30,6 @@ class RateLimiter:
 
 limiter = RateLimiter(max_requests=5, window=60)
 
-print(limiter.allow('user_101'))
+# print(limiter.allow('user_101'))
 for i in range(7):
     print(f"Request {i + 1} -> {limiter.allow('user_101')}")
-
-

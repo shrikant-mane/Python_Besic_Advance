@@ -1,16 +1,16 @@
-# class BankUser:
-#     def __init__(self, name, age):
-#         self._name = name
-#         self.age =age
-#
-#     def info(self):
-#         print(f"{self._name}")
-#         print(f"{self.age}")
-#
-#
-# user = BankUser("shrikant", 27)
+class BankUser:
+    def __init__(self, name, age):
+        self._name = name
+        self.age =age
+
+    def info(self):
+        print(f"{self._name}")
+        print(f"{self.age}")
+
+
+# user = BankUser("Samir", 27)
 # user.info()
-# user.name = "vinay"
+# user.name = "Shashank"
 # user.info()
 
 

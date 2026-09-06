@@ -21,6 +21,6 @@ class Student:
         print(obj.age)
         # print(Student.static_display())
 student = Student("shrikant", 18)
-# student.instance_display()
+student.instance_display()
 student.static_display(student)
 student.class_display(student)

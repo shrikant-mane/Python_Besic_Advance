@@ -1,0 +1,3 @@
+“A serializer is a component that converts a Python object or complex data, such as a
+model instance, into a format like JSON so that it can be easily transferred through an
+API. It can also deserialize incoming JSON data back into Python objects or validated data.”

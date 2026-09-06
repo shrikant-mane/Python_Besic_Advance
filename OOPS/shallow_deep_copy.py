@@ -16,10 +16,10 @@ address = Address("Pune")
 
 student1 = Student("Rahul", address)
 
-# Shallow copy
+# Shallow copy --> Different outer object but share same inner objects
 student2 = copy.copy(student1)
 
-# Deep copy
+# Deep copy --> Different outer object + different inner objects
 student3 = copy.deepcopy(student1)
 
 

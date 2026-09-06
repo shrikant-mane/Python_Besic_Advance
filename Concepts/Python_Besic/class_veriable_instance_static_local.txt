@@ -1,0 +1,56 @@
+==================
+instance & static(class) variable
+==================
+
+CASE I
+
+While changing the static variable using object reference variable name ,
+The static variable value doesn't change instead new instance variable for that particular
+got created
+
+class Student:
+    x = 10
+    def __init__(self):
+        self.y = 20
+        self.z = 30
+
+s1 = Student()
+s2 = Student()
+print(s1.x)
+print(s2.x)
+s1.x = 40
+
+print(s1.x)
+print(s2.x)
+print(Student.x)
+
+print(id(Student.x))
+print(id(s1.x))
+print(id(s2.x))
+
+-----------------
+CASE II
+
+Main concept: An instance variable with the same name as a class variable
+overrides/shadows it for that particular object.
+
+class Student:
+    x = 10
+    def __init__(self):
+        self.y = 20
+        self.x = 30
+
+
+s1 = Student()
+s2 = Student()
+print(s1.x)
+print(s2.x)
+s1.x = 40
+
+print(s1.x)
+print(s2.x)
+print(Student.x)
+
+print(id(Student.x))
+print(id(s1.x))
+print(id(s2.x))

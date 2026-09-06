@@ -2,7 +2,7 @@ from collections import Counter
 
 def dict_operations(dictionary):
     print(dictionary.items())
-    print(type(dictionary.items()[1]))
+    # print(type(dictionary.items()[1]))
     print(dictionary.keys())
     print(dictionary.values())
     print(dictionary.get('name'))
@@ -10,7 +10,7 @@ def dict_operations(dictionary):
     print(dictionary)
 
 dict_obj = {'name': 'shrikant', 'village':'Rajache Kurle', 'dist':'Satara'}
-# dict_operations(dict_obj)
+dict_operations(dict_obj)
 
 
 def create_dict(name_list):
