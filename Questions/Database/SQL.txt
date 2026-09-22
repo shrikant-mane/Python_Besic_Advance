@@ -1,0 +1,39 @@
+1. What are database indexes and how do they improve query performance?
+    How does an index improve performance?
+        --> B-tree/B+ tree-style indexes
+
+    Composite index
+    When should you create an index?
+    When can an index hurt performance?
+    Single-column vs composite index?
+    What is a unique index?
+        --> CREATE UNIQUE INDEX idx_employee_email
+                ON employees(email);
+        --> duplicate values are not allowed
+
+    How would you identify a slow query?
+        --> EXPLAIN | EXPLAIN ANALYZE | Seq Scan on table |
+
+
+2. Explain database isolation levels.
+
+
+What is database transaction?
+    -- A database transaction is a sequence of one or more database operations that are
+    treated as a single logical unit of work.
+    -- A transaction is commonly explained through ACID:
+
+
+What is race condition?
+    -- A race condition in a database occurs when two or more concurrent transactions access
+    and modify the same data, and the final result depends on the timing or order in which
+    those transactions execute.
+
+
+
+
+
+
+
+
+

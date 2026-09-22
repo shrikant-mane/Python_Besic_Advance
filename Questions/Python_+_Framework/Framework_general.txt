@@ -1,0 +1,37 @@
+What is difference between Django and FastAPI?
+
+| Feature           | Django                                                      | FastAPI                                                 |
+| ----------------- | ----------------------------------------------------------- | ------------------------------------------------------- |
+| Primary purpose   | Full-stack web framework                                    | API/web framework                                       |
+| Architecture      | Batteries-included                                          | Lightweight/modular                                     |
+| ORM               | Django ORM built-in                                         | No built-in ORM; SQLAlchemy, SQLModel, etc. can be used |
+| Admin panel       | Built-in                                                    | Not built-in                                            |
+| Authentication    | Built-in ecosystem                                          | Usually added through dependencies/libraries            |
+| API validation    | Django Forms/DRF serializers                                | Pydantic                                                |
+| API documentation | Requires DRF/schema tooling                                 | Automatic OpenAPI/Swagger/ReDoc                         |
+| Async             | Supports async, but historically sync-oriented              | Async-first design                                      |
+| Performance       | Excellent for many applications                             | Generally excellent for I/O-bound APIs                  |
+| Best suited for   | Monoliths, full web applications, CMS/business applications | APIs, microservices, high-concurrency services          |
+
+========================
+When should you use each?
+Synchronous
+
+    CPU-bound work
+        multiprocessing
+        worker processes
+        background job systems
+        task queues
+    simple CRUD applications using synchronous libraries
+    code where async doesn't provide a meaningful benefit
+    synchronous database drivers
+
+Asynchronous (async and await)
+
+    database I/O with async drivers
+    external API calls
+    network operations
+    WebSockets
+    many concurrent I/O-bound requests
+
+

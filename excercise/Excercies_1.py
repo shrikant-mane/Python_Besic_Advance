@@ -57,7 +57,7 @@ def process_data():
     time.sleep(1)
     return "process completed"
 
-# print(process_data())
+print(process_data())
 
 
 ## Implement Retry Logic
@@ -84,4 +84,4 @@ def call_external_service():
 
     return "success"
 
-call_external_service()
+# call_external_service()

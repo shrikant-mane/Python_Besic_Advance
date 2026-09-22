@@ -1,0 +1,56 @@
+Why you choose FastAPI?
+    -- application API focused
+    -- provide higher developer productivity
+    -- strong performance
+    -- excellent support --> type hint, automatic request validation through Pydantic,
+            automatic OpenAPI documentation
+    -- first-class support for asynchronous programming
+    -- Compared with Django, FastAPI is more lightweight and gives me more flexibility
+    -- ORM, authentication mechanism, and project architecture
+
+I have worked with Django as well, but for API-focused services I prefer FastAPI because it
+gives me automatic validation, OpenAPI documentation, dependency injection, and async support
+with relatively little boilerplate. I would choose Django when I need its batteries-included
+features such as Django ORM, admin, authentication, and a complete web application structure.
+So my choice of FastAPI is based on the application's requirements rather than simply because
+it is faster.
+
+
+What is Pydantic in FastAPI?
+    -- data validation and data parsing
+    -- request
+        @app.post("/users")
+        async def create_user(user: UserRequest)
+
+    -- response
+        @app.get("/users/{user_id}", response_model=UserResponse)
+
+    Client → FastAPI → Pydantic validation → endpoint → response model → Client
+
+    Pydantic = Define the data structure + validate the data + parse/serialize the data.
+
+
+=====================
+What happens when you use a blocking operation inside an async FastAPI endpoint?
+    -- When you use a blocking operation inside an async FastAPI endpoint, you can block the event loop.
+    -- That means other requests that should be handled concurrently may have to wait
+
+    Better approach
+        For I/O operations, use async-compatible libraries.
+            For example, an async HTTP client:
+
+    What if you must use a blocking function?
+        You can move blocking work away from the event loop using a threadpool mechanism.
+        FastAPI can then run the blocking function in a worker thread instead of blocking the async event loop.
+        """
+        from fastapi.concurrency import run_in_threadpool
+            @router.get("/report")
+            async def generate_report():
+                result = await run_in_threadpool(
+                    blocking_function
+                )
+                return result
+           """
+
+
+

@@ -1,0 +1,18 @@
+Four pillars of OOP?
+    1. Encapsulation
+        Encapsulation means bundling data and the methods that operate on that data together,
+        while controlling how that data is accessed or modified.
+
+    2. Inheritance
+        Parent - Child Relationship.
+
+    3. Polymorphism
+        One form(method) but different implementations.
+
+    4. Abstraction
+        Abstraction means exposing only the necessary interface while hiding the implementation details.
+
+
+Explain Inheritance with the real time scenerio?
+    Person --> IS A --> Employee --> HAS A --> Car
+

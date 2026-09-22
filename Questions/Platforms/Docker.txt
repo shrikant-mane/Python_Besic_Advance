@@ -1,0 +1,122 @@
+What is Docker?
+    -- containerization platform
+    -- packages an application along with its dependencies, libraries, runtime, and configuration
+        into a standardized unit called a container.
+
+Dockerfile?
+    A text file containing instructions for building a Docker image.
+
+Image?
+    A read-only template/package containing the application and everything required to create a container.
+    Image = blueprint
+
+Container?
+    A running, isolated instance created from a Docker image.
+    Container = running application created from that blueprint
+
+Docker Hub / Registry?
+    A place where Docker images can be stored and shared.
+
+Dockerfile → Image → Container
+
+| Docker Container            | Virtual Machine              |
+| --------------------------- | ---------------------------- |
+| Shares host OS kernel       | Has its own guest OS         |
+| Lightweight                 | Heavier                      |
+| Starts quickly              | Usually slower to start      |
+| Lower resource overhead     | Higher resource overhead     |
+| Application-level isolation | Full OS-level virtualization |
+
+
+What is Docker Composer?
+    -- Docker Compose is a tool used to define and run multi-container Docker applications
+    we define all the services, networks, volumes, ports, and environment variables in a
+    YAML file, usually compose.yaml or docker-compose.yml
+
+    docker compose up  --> Start services
+    docker compose down -->Stop Services
+
+
+| Feature               | Purpose                                   |
+| --------------------- | ----------------------------------------- |
+| Services              | Defines containers such as API, DB, Redis |
+| Networks              | Allows containers to communicate          |
+| Volumes               | Persists database/application data        |
+| Environment variables | Provides configuration                    |
+| Ports                 | Maps container ports to host ports        |
+| Dependencies          | Defines relationships between services    |
+
+        Docker:
+        FastAPI → one container
+
+        Docker Compose:
+        FastAPI + PostgreSQL + Redis + Nginx
+                        ↓
+                 one application stack
+
+
+What are Docker volumes and why are they needed?
+Docker containers are generally considered ephemeral, so data stored only inside a container
+can be lost when the container is removed. Docker volumes provide persistent storage that
+exists independently of the container lifecycle.
+
+        services:
+          db:
+            image: postgres:16
+            volumes:
+              - postgres_data:/var/lib/postgresql/data
+
+        volumes:
+          postgres_data:
+
+
+How do Docker containers communicate with each other?
+    -- Containers on the same Docker network can communicate with each other using their service
+        or container names rather than using localhost.
+
+
+Why doesn't localhost work between Docker containers?
+    -- Because each container has its own network namespace. localhost refers to the current
+    container, not another container. Containers on the same Docker network should communicate
+    using the other service's hostname.
+
+
+What is the difference between CMD and ENTRYPOINT?
+    -- Both define what runs when a container starts.
+    CMD : provides the default command or default arguments
+           can easily be overridden when running the container.
+    ENTRYPOINT : define the executable that the container is intended to run.
+
+
+What is a Docker network?
+    -- provides networking and communication between containers
+                 Docker Network
+                       │
+          ┌────────────┼────────────┐
+          ↓            ↓            ↓
+       FastAPI      PostgreSQL     Redis
+
+    create manually
+        docker network create network_name
+
+
+|    | Question                               | Core concept                       |
+| -- | -------------------------------------- | ---------------------------------- |
+| 1  | What is Docker?                        | Containerization                   |
+| 2  | Image vs Container?                    | Blueprint vs running instance      |
+| 3  | What is Dockerfile?                    | Image definition                   |
+| 4  | What is Docker Compose?                | Multi-container management         |
+| 5  | Docker vs VM?                          | Containerization vs virtualization |
+| 6  | What is Docker Volume?                 | Persistent storage                 |
+| 7  | How do containers communicate?         | Docker network/service name        |
+| 8  | CMD vs ENTRYPOINT?                     | Container startup                  |
+| 9  | What is Docker Network?                | Container communication/isolation  |
+| 10 | How to Dockerize FastAPI + PostgreSQL? | Real-world implementation          |
+
+
+
+
+
+
+
+

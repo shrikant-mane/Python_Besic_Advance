@@ -1,0 +1,119 @@
+1. What is the difference between an iterator and a generator in Python?
+    >>> numbers = (num for num in range(5))
+    >>> print(type(numbers))
+    <class 'generator'>
+
+    Why the generator taken as memory efficient?
+        lazy evaluation
+
+    Can you iterate over a generator twice?
+
+        No, not normally. A generator is single-use. Once it is exhausted, you cannot iterate over
+        it again.
+
+
+2. What is the difference between shallow copy and deep copy?
+    Explain with nested lists/dictionaries.
+    When would you use copy.copy() vs copy.deepcopy()?
+
+
+3. What are decorators in Python? Explain how you would create a custom decorator.
+    Why do we use functools.wraps()?
+    Where have you used decorators in Django?
+
+
+4. Explain *args and **kwargs.
+    Can both be used together?
+    What happens when a function receives unexpected keyword arguments?
+
+
+5. What is the difference between mutable and immutable objects?
+
+
+6. What is the difference between multiprocessing, multithreading and asyncio?
+
+
+7. Django ORM vs raw SQL — when would you use each?
+    Does using ORM mean you don't need to understand SQL?
+    How can ORM queries become slow?
+
+
+8. What is select_related() vs prefetch_related()?
+    How would you prevent N+1 queries?
+
+
+11. What is an N+1 query problem?
+
+
+12.Explain Django transaction.atomic()
+    What happens if an exception occurs?
+    What is rollback?
+    Why are transactions important in financial/order/inventory systems?
+
+    What happens with nested atomic blocks?
+        Outer atomic() = actual transaction
+        Inner atomic() = savepoint
+
+    How to implement transaction in FastAPI using SQLAlchemy?
+
+
+13.What is the difference between DRF Serializer and ModelSerializer?
+    How does validation work?
+    validate() vs validate_<field>()?
+    How do you implement custom validation?
+    How do nested serializers work?
+
+
+14. Authentication vs Authorization — what's the difference?
+    How would you implement Role-Based Access Control in DRF?
+
+
+15.How does JWT authentication work?
+    Access token vs refresh token?
+    Where should tokens be stored?
+    What happens when access token expires?
+    How do you revoke JWTs?
+        method I --> Blacklist
+        method II --> Redis
+
+
+16. How does Pydantic validation work in FastAPI?
+    How Pydantic works in FastAPI?
+    What happens if the client sends age: "abc"?
+    How does FastAPI generate the validation response?
+         {
+          "detail": [
+            {
+              "type": "int_parsing",
+              "loc": ["body", "age"],
+              "msg": "Input should be a valid integer, unable to parse string as an integer",
+              "input": "abc"
+            }
+          ]
+        }
+
+
+17. Django synchronous or asynchronous ?
+    What is ASGI?
+    What is WSGI?
+    Can Django use async views?
+    Can synchronous ORM code be directly called from an async context?
+        -- Not directly — Django's synchronous ORM code should not be called directly from an async context.
+        -- Because the synchronous ORM operation can block the async event loop.
+        -- Instead, use Django's async ORM methods where available.
+
+
+18: What is the difference between transaction.atomic() and select_for_update()?
+
+    Why are they commonly used together?
+        -- Because select_for_update() needs a transaction to make the row lock meaningful.
+
+
+
+HTTP CODE 400, 401 like
+422 -- Validation Error
+
+
+
+
+
