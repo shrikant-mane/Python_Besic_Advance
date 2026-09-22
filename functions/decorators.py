@@ -36,7 +36,7 @@ print(my_sumwithout_wrap.__doc__)
 
 
 
-# Decorator with arguments but without functools.wraps()
+# Decorator with arguments but with functools.wraps()
 def my_sum_decor(func):
 
     @wraps(func)
